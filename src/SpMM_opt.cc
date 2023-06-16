@@ -108,7 +108,7 @@ Matrix SpMM_opt_2(const Matrix &A, const SparseMatrix &B) {
 
 // blocking
 
-Matrix SpMM_opt(const Matrix &A, const SparseMatrix &B) {
+Matrix SpMM_opt_3(const Matrix &A, const SparseMatrix &B) {
   if (A.size() != B.size()) return Matrix();
 
   auto BT = transpose_sparse(B);
@@ -138,6 +138,10 @@ Matrix SpMM_opt(const Matrix &A, const SparseMatrix &B) {
 
 
 // blocking + OpenMP
+// Ah, wait, I found this one seem also failed
+// but why? (thiiiiinking
+// (then the last one must be failed too...)
+// So sorry for that, and I lie in it now
 /* ---------------- wrote by GPT ---------------------*/
 
 Matrix SpMM_opt(const Matrix &A, const SparseMatrix &B) {
